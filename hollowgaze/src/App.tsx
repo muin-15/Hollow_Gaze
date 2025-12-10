@@ -18,8 +18,10 @@ function App() {
   return (
     <div className="App">
       <div className="intro">
+        <div className='text-glow'>
         <h1>A memory is required for entry.</h1>
         <h1>Which will you forget?</h1>
+        </div>
         <button className='startbutton' onClick={handleUnmute}>Start</button>
       </div>
     </div>

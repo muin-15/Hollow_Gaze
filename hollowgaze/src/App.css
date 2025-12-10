@@ -10,7 +10,9 @@
   color: #9AFF00;
   font-size: 1rem;
   text-shadow: #6B1A1A 2px 2px 4px;
+  cursor: pointer;
 }
+
 .startbutton{
 
   background-color:  #000000CC;  
@@ -26,17 +28,9 @@
 }
 .startbutton:hover{
   background-color: #2B0000;
-  border: #FF0000;
+  border-color: #FF0000;
   color: #FF2E2E;
   cursor: pointer;
 }
 
-.starting-screen {
-  background-image: url('./haunty');
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: #FFFFFF;
-  font-size: 2rem;
-}
+

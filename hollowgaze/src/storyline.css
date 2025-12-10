@@ -1,0 +1,68 @@
+
+.story-container {
+  /* Make it a full-screen, black background */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+
+  /* Use Flexbox to perfectly center the text */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.story-text {
+  /* Style the text */
+  color: white;
+  font-size: 2.5em; /* Large, impactful text */
+  font-family: 'Georgia', serif; /* A classic storytelling font */
+  text-align: center;
+  max-width: 80%;
+
+  /* The magic: A subtle fade-in animation for each line */
+  animation: fadeIn 2s ease-in-out;
+}
+
+.story-text:hover{
+    color: white;
+    cursor: pointer;
+  /* Apply the animation only on hover */
+    animation: glowy-cursor 2s infinite ease-in-out;
+}
+
+.skip-button-container {
+  position: fixed;
+  bottom: 30px;
+  right: 80px;
+  height: 40px;
+  width: 120px;
+  color: #B4FF00;
+  border: 2px solid #FF0000;
+  background-color: #4A0F0F;
+  
+  border-radius: 20%;
+}
+.skip-button-container:hover {
+  background-color: #2B0000;
+  border-color: #B4FF00;
+  color: #FF2E2E;
+  box-shadow: 0 6px 0 #3FFF00;
+  cursor: pointer;
+}
+/* Define the fade-in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 10;
+  }
+}
+@keyframes glowy-cursor{
+  0% { text-shadow: 0 0 5px #FF0000, 0 0 10px #FF0000, 0 0 20px #FF0000; }
+  50% { text-shadow: 0 0 10px #FF4500, 0 0 20px #FF4500, 0 0 30px #FF4500; }
+  100% { text-shadow: 0 0 5px #FF0000, 0 0 10px #FF0000, 0 0 20px #FF0000; }
+}
