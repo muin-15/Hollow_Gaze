@@ -7,7 +7,7 @@ body {
   min-height: 100vh;
 
   /* background: gradient fallback + public asset `download.gif` */
-  background-image: linear-gradient(120deg, rgba(12, 12, 18, 0.6), rgba(80,20,60,0.6)), url('/download.gif');
+  background-image: linear-gradient(120deg, rgba(12, 12, 18, 0.6), rgba(80,20,60,0.6)), url('/horryfying.gif');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
