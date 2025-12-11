@@ -1,0 +1,13 @@
+
+.Start-info {
+  position: absolute;
+  top: 0;
+  left: 50;
+  
+  
+
+  /* Use Flexbox to perfectly center the text */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

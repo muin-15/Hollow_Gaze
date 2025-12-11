@@ -2,23 +2,23 @@ import {useState, useEffect} from 'react';
 import './storyline.css';
 import { useNavigate } from 'react-router-dom';
 
-const storyline=[
-    "There was a city where the people sought to transcend individuality.",
-    " They wove their minds and bodies together through a luminous, psychic fungus, creating a single, harmonious superorganism.",
-    " They were on the verge of becoming a god.",
-    "To achieve the final stage, they needed a new sense—a single eye to perceive the universe as a unified whole.",
-    " They reached out into the void, and something answered.",
-    "The Hollow Gaze is a parasitic sense organ.",
-    "It grafted itself onto the city's collective consciousness, becoming its one and only eye.",
-    "It offered them the unity they craved, at a small price: their selves.",
-    "The apotheosis was a success. The city is now a single being.",
-    "A mountain of blissful, pulsating flesh and glowing mycelium, covering miles.",
-    "It thinks with one mind, sees with thousands of eyes, and feels only a placid, perfect contentment.",
-    "The people are all there, and they are all happy. And they want you to join them.",
-    "Their gentle, psychic invitation is a constant, maddening hum.",
-    "The entrance to the city is no longer physical.",
-    "It is a psychic membrane. To pass through it, you must give the collective a thread to pull you in with.",
-    "To forget a memory is to offer up a piece of your own mind, allowing the city to extrude a tendril of consciousness into your skull and guide you into the warmth of the fold."
+const storyline = [
+    "They called it the City of Tomorrow. A monument to science and reason.",
+    "Here, the brightest minds in the world gathered, led by one man: Dr. Aris Thorne.",
+    "He promised humanity a future free from doubt, a world guided by pure logic.",
+    "To achieve this, he sought to build a 'Nexus'—a machine that could unify all human thought into a single, perfect consciousness.",
+    "Ignoring all warnings, he drew power from sources unknown, from dimensions that should have remained untouched.",
+    "The Nexus activated for a single, deafening moment.",
+    "There was no fire. No explosion. Only a wave of absolute silence.",
+    "It did not unify thought. It shattered reality.",
+    "The city is now a tomb, frozen in the echo of that moment.",
+    "Its people are gone, but their regrets, their ambitions, and their fears still wander the streets as spectral energy.",
+    "And at the center of it all, Dr. Thorne remains.",
+    "His ambition was so great that his soul was burned into the fabric of the Nexus itself.",
+    "He is the ghost in the machine, the warden of this silent prison.",
+    "The walls of reality are thin here. Getting in was an accident.",
+    "But the gate is now locked by the will of its master.",
+    "To escape, you must find the Nexus and extinguish the soul that fuels it. The only way out is through the heart of the failure."
 ];
 
 function Starting() {
