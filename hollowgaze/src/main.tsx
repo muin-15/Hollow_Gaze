@@ -6,8 +6,8 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import App from './App.tsx'
 import Starting from './starting.tsx'; // <-- Import your new Game component
 import Game from './game.tsx'; // <-- Import your new Game component
-import './index.css'
-
+import './index.css';
+import MGame from './maingame.tsx';
 // 1. Define your routes (the "pages" of your app)
 const router = createBrowserRouter([
   {
@@ -21,7 +21,11 @@ const router = createBrowserRouter([
   {
     path: "/game",      // The URL for the game screen
     element: <Game />,  // Show the Game component
-  }
+  },
+  {
+    path:"/maingame",
+    element: <MGame />,
+  },
 ]);
 
 // 2. Tell React to use the router

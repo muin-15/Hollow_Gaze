@@ -1,23 +1,46 @@
 
+.Gamepage{
+    background-color: rgba(38, 57, 71, 0.627);
+}
 .Start-info {
   position: absolute;
   top: 0;
   left: 50;
-  
-  
-
   /* Use Flexbox to perfectly center the text */
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.game-screen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+}
+.Sign{
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 52px;
+  top: 45%;
+  height: 30%;
+  text-align: center;
+  padding-top: 80px;
+  color: black;
+  text-shadow: 0px 0px 5px #B4FF00;
+  text-shadow: 0px 0px 10px #9AFF00;
+  text-shadow: 0px 0px 5px #3FFF00;
+  text-shadow: 0px 0px 15px #B4FF00;
+  text-shadow: 0px 0px 30px #9AFF00;
+  text-shadow: 0px 0px 15px #3FFF00;
 }
 .character-container{
   position: absolute;
   background-color: rgba(0,0,0, 0.4); 
   width: 350px;
   height: 340px;
-  top: 25%;
-  left: 12%;
+  top: 35%;
+  left: 12.5%;
   border-radius: 15%;
   box-shadow: black 10px 10px 10px;
   border: 2px solid black;
@@ -26,7 +49,7 @@
 .character-container:hover {
   cursor: pointer;
   box-shadow: black 20px 20px 20px;
-  transition: 0.3s ease-out;
+  transition: 0.3s ease-in-out;
 }
 .user-image{
   width: 200px;
@@ -34,7 +57,7 @@
   background-color: rgb(46, 236, 52); /* Fallback color */
   background-color: rgba(31, 195, 50, 0.4); 
   position: absolute;
-  top: 32%;
+  top: 45%;
   left: 18%;
   height: auto;
   z-index: 2;
@@ -48,8 +71,8 @@
 }
 .user-info{
   position: absolute;
-  top: 60%;
-  left: 25%;
+  top: 73%;
+  left: 24.5%;
   transform: translate(-50%, -50%);
   color:whitesmoke ;
   z-index: 2;
@@ -58,7 +81,7 @@
 }
 .Start-info{
   width: 600px;
-  height: 200px;
+  height: 300px;
   background-color: rgba(0, 0, 0, 0.5); /* Black background with transparency */
   color: white; /* White text color */
   border: 2px solid #4A0F0F; /* White border */
@@ -66,7 +89,7 @@
   padding: 20px; /* Padding inside the box */
   box-shadow: 0 0 10px rgba(255, 255, 255, 0.5); /* Subtle glow effect */
   position: absolute;
-  top: 55%;
+  top: 60%;
   left: 70%;
   transform: translate(-50%, -50%);
   z-index: 2;
@@ -78,11 +101,16 @@
   padding: 15px 32px;
   text-align: center;
   display: inline-block;
-  font-size: 16px;
+  font-size: 24px;
   x: 100px;
   margin-top: 20px;
   border-radius: 12px;
   cursor: pointer;
   box-shadow: 4px 8px 4px #2E7000;
-  margin-left: 35%;
+  margin-left: 20%;
+}
+.instruction{
+  top: 80%;
+  left: 20%;
+  z-index: 2;
 }

@@ -1,0 +1,12 @@
+
+.upper-bg{
+    background-color: rgb(226, 54, 54, 0.65);
+    height: 75%;
+    width: 100%;
+    top: 0%;
+}
+.lower-bg{
+    height: 25%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.627);
+}
