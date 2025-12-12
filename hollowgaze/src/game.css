@@ -54,7 +54,7 @@
 .user-image{
   width: 200px;
   height: 400px;
-  background-color: rgb(46, 236, 52); /* Fallback color */
+  background-color: rgb(46, 236, 52); 
   background-color: rgba(31, 195, 50, 0.4); 
   position: absolute;
   top: 45%;
