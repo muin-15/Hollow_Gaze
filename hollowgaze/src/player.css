@@ -1,0 +1,34 @@
+.knight {
+  /* Dimensions of a single frame */
+  width: 70px;
+  height: 100px;
+  /* Make it bigger */
+  transform: scale(4);
+  image-rendering: pixelated;
+}
+
+/* --- STATE STYLES --- */
+.knight.idle {
+  background-image: url('/with_outline/ATTACK 1.png');
+  background-position: 0 0;
+}
+
+.knight.walking {
+  background-image: url('/with_outline/RUN.png');
+  animation: walk-cycle 0.4s steps(8) infinite;
+}
+
+.knight.attacking {
+  background-image: url('/with_outline/ATTACK 1.png');
+  animation: attack-cycle 1s steps(6) forwards;
+}
+
+/* --- KEYFRAMES --- */
+@keyframes walk-cycle {
+  from { background-position-x: 0; }
+  to { background-position-x: -640px; } /* 8 * 80 */
+}
+@keyframes attack-cycle {
+  from { background-position-x: 0; }
+  to { background-position-x: -480px; } /* 6 * 80 */
+}

@@ -1,71 +1,75 @@
-.gaming-screen{
-    position: relative;
-    height: 100vh;
-    width: 100vw;
-    filter: blur(8px);
-    overflow: hidden;
-    background-color: rgb(226, 54, 54, 0.9);
-    z-index: 1;
+/* src/maingame.css (REPLACE EVERYTHING WITH THIS) */
+
+/* The main container that holds the entire scene */
+.maingame-container {
+  position: relative; 
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  background-color: #0c0d11; /* Dark fallback background */
 }
-.upper-bg{
-    background-color: rgb(226, 54, 54, 0.65);
-    height: 55%;
-    width: 100%;
-    top: 0%;
-    z-index: 1;
+
+/* --- LAYER 1: Background --- */
+.blurry-background {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  filter: blur(8px);
+  z-index: 1; /* At the very back */
 }
-.lower-bg{
-    height: 45%;
-    width: 100%;
-    background-color: rgba(184, 25, 25, 0.627);
-    z-index: 1;
+.upper-bg {
+  background-color: rgb(226, 54, 54, 0.65);
+  height: 55%;
 }
-.lower-front-bg{
+.lower-bg {
+  background-color: rgba(184, 25, 25, 0.627);
+  height: 45%;
+}
+
+/* --- LAYER 2: Foreground --- */
+.foreground {
+  position: relative; /* Use relative to contain children */
+  width: 100%;
+  height: 100%;
+  z-index: 2; /* On top of the background */
+}
+
+/* --- FOREGROUND ELEMENTS --- */
+.lower-front-bg {
+  position: absolute;
+  width: 100%;
+  height: 15%;
+  background-color: black;
+  bottom: 0; /* Changed from 'top' for better positioning */
+  z-index: 3; /* Above other foreground elements, below characters */
+}
+
+.Whiteghost1, .Whiteghost2, .Whiteghost3 {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  background-image: url('/whiteghost.gif');
+  background-size: cover;
+  z-index: 4; /* On top of the floor */
+}
+.Whiteghost1 { top: 52%; left: 60%; }
+.Whiteghost2 { top: 65%; left: 75%; }
+.Whiteghost3 { top: 45%; left: 85%; }
+
+/* The container that MOVES the knight */
+.knight-container {
+  position: absolute;
+  /* Positions the KNIGHT'S FEET on the floor */
+  /* calc(85% - 60px) -> (top of the floor - height of the knight) */
+  top: calc(80% - 60px); 
+  z-index: 5; /* The highest layer, always on top */
+}
+
+.instructions {
+    margin-left: 500px;
     position: absolute;
-    height: 15%;
-    width: 100%;
-    background-color: rgba(0, 0, 0);
-    top: 85%;
-    z-index: 2;
-    border: 5px solid black;
-}
-.Character{
-    position: absolute;
-    height: 250px;
-    width: 200px;
-    background-image: url('./character.gif');
-    background-size: cover;
-    top: 60%;
-    left: 10%;
-    z-index: 3;
-}   
-.Whiteghost1{
-    position: absolute;
-    height: 200px;
-    width: 200px;
-    background-image: url('./whiteghost.gif');
-    background-size: cover;
-    top: 52%;
-    left: 60%;
-    z-index: 3;
-}
-.Whiteghost2{
-    position: absolute;
-    height: 200px;
-    width: 200px;
-    background-image: url('./whiteghost.gif');
-    background-size: cover;
-    top: 65%;
-    left: 75%;
-    z-index: 3;
-}
-.Whiteghost3{
-    position: absolute;
-    height: 200px;
-    width: 200px;
-    background-image: url('./whiteghost.gif');
-    background-size: cover;
-    top: 45%;
-    left: 85%;
-    z-index: 3;
+    color: white;
+    z-index: 10;
+    text-align: center;
 }
