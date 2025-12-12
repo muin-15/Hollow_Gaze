@@ -1,6 +1,6 @@
 // src/main_game.tsx
 
-import React, { useState, useEffect, useRef } from 'react';
+import  { useState, useEffect, useRef } from 'react';
 import Knight from './player';
 import './maingame.css';
 
@@ -13,7 +13,7 @@ function MGame() {
   const [knightX, setKnightX] = useState(100);
   const [knightState, setKnightState] = useState<'idle' | 'walking' | 'attacking'>('idle');
   const [areGhostsVisible, setAreGhostsVisible] = useState(true); // <<< --- NEW: State to control ghost visibility
-  const requestRef = useRef<number>();
+  const requestRef = useRef<number>(0);
 
   // --- Keyboard Input Logic (No changes needed here) ---
   useEffect(() => {
