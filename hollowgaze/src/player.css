@@ -9,13 +9,13 @@
 
 /* --- STATE STYLES --- */
 .knight.idle {
-  background-image: url('/with_outline/ATTACK 1.png');
+  background-image: url('/with_outline/ATTACK 2.png');
   background-position: 0 0;
 }
 
 .knight.walking {
-  background-image: url('/with_outline/RUN.png');
-  animation: walk-cycle 0.4s steps(8) infinite;
+  background-image: url('/with_outline/WALK.png');
+  animation: walk-cycle 1s steps(8) infinite;
 }
 
 .knight.attacking {
@@ -26,9 +26,9 @@
 /* --- KEYFRAMES --- */
 @keyframes walk-cycle {
   from { background-position-x: 0; }
-  to { background-position-x: -640px; } /* 8 * 80 */
+  to { background-position-x: -800px; } /* 8 * 80 */
 }
 @keyframes attack-cycle {
   from { background-position-x: 0; }
-  to { background-position-x: -480px; } /* 6 * 80 */
+  to { background-position-x: -600px; } /* 6 * 80 */
 }

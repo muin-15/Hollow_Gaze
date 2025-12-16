@@ -52,7 +52,9 @@
   background-image: url('/whiteghost.gif');
   background-size: cover;
   z-index: 4; /* On top of the floor */
+  transition: opacity 0s ease-out, transform 10s ease-out;
 }
+
 .Whiteghost1 { top: 52%; left: 60%; }
 .Whiteghost2 { top: 65%; left: 75%; }
 .Whiteghost3 { top: 45%; left: 85%; }

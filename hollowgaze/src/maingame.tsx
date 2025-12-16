@@ -5,41 +5,63 @@ import Knight from './player';
 import './maingame.css';
 
 // --- Game Constants ---
-const KNIGHT_WALK_SPEED = 5;
+const KNIGHT_WALK_SPEED = 4;
 const GHOST_DISAPPEAR_TRIGGER_X = 600; // <<< --- NEW: The X-coordinate that triggers the ghosts to disappear
 
 function MGame() {
   // --- Game State ---
-  const [knightX, setKnightX] = useState(100);
+  const [knightX, setKnightX] = useState(50);
   const [knightState, setKnightState] = useState<'idle' | 'walking' | 'attacking'>('idle');
   const [areGhostsVisible, setAreGhostsVisible] = useState(true); // <<< --- NEW: State to control ghost visibility
   const requestRef = useRef<number>(0);
 
   // --- Keyboard Input Logic (No changes needed here) ---
-  useEffect(() => {
-    const handleKeyDown = (event: KeyboardEvent) => {
-      const key = event.key.toLowerCase();
-      if (key === 'a' && knightState !== 'attacking') {
-        setKnightState('attacking');
-        setTimeout(() => setKnightState('idle'), 400);
-      }
-      if (key === 'arrowright' && knightState === 'idle') {
-        setKnightState('walking');
-      }
-    };
-    const handleKeyUp = (event: KeyboardEvent) => {
-      if (event.key === 'arrowright' && knightState === 'walking') {
-        setKnightState('idle');
-      }
-    };
-    window.addEventListener('keydown', handleKeyDown);
-    window.addEventListener('keyup', handleKeyUp);
-    return () => {
-      window.removeEventListener('keydown', handleKeyDown);
-      window.removeEventListener('keyup', handleKeyUp);
-    };
-  }, [knightState]);
+// --- NEW KEYBOARD INPUT LOGIC ---
 
+useEffect(() => {
+  // This function runs when a key is pressed DOWN
+  const handleKeyDown = (event: KeyboardEvent) => {
+    // --- CHANGE 1: Used a switch statement for better organization ---
+    switch (event.key) {
+      case 'a':
+        // Only allow an attack if not already attacking
+        if (knightState !== 'attacking') {
+          setKnightState('attacking');
+          // --- CHANGE 2: Added a reliable timer to reset the attack state ---
+          // This is more robust than relying on onAnimationEnd.
+          setTimeout(() => setKnightState('idle'), 400); // Duration matches CSS
+        }
+        break;
+      case 'ArrowRight':
+        // Only start walking if currently idle
+        if (knightState === 'idle') {
+          setKnightState('walking');
+        }
+        break;
+      default:
+        break;
+    }
+  };
+  
+  // This function runs when a key is RELEASED
+  const handleKeyUp = (event: KeyboardEvent) => {
+    // If we release the right arrow AND we are currently walking...
+    if (event.key === 'ArrowRight' && knightState === 'walking') {
+      // ...then stop walking and go back to idle.
+      setKnightState('idle');
+    }
+  };
+
+  // The attachment logic is the same
+  window.addEventListener('keydown', handleKeyDown);
+  window.addEventListener('keyup', handleKeyUp);
+
+  // The cleanup logic is the same
+  return () => {
+    window.removeEventListener('keydown', handleKeyDown);
+    window.removeEventListener('keyup', handleKeyUp);
+  };
+}, [knightState]); // The dependency array is the same
   // --- Game Loop for Movement AND Game Events ---
   useEffect(() => {
     const gameLoop = () => {
