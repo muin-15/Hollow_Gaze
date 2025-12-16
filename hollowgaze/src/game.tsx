@@ -26,8 +26,8 @@ function Game(){
                     
                 </div>
                 <div className='instruction'>
-                        <button>W</button>
-                        <p> Press 'W' to walk forward cuz you can't go backward</p>
+                        <button>&gt;</button>
+                        <p> Press Right arrow key to walk forward cuz you can't go backward</p>
                         <button>A</button>
                         <p>press 'A' to fight</p>
                     </div>
