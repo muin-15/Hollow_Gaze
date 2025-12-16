@@ -1,4 +1,4 @@
-# Hollow Gaze (Working Title)
+# Hollow Gaze 
 
 A 2D atmospheric action game built from the ground up with React, TypeScript, and modern web technologies.
 
