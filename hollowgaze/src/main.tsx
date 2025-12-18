@@ -8,6 +8,9 @@ import Starting from './starting.tsx'; // <-- Import your new Game component
 import Game from './game.tsx'; // <-- Import your new Game component
 import './index.css';
 import MGame from './maingame.tsx';
+import Videointro from './videointro.tsx';
+import Leveltwo from './leveltwo.tsx'
+
 // 1. Define your routes (the "pages" of your app)
 const router = createBrowserRouter([
   {
@@ -26,6 +29,14 @@ const router = createBrowserRouter([
     path:"/maingame",
     element: <MGame />,
   },
+  {
+    path:"/videointro",
+    element: <Videointro />,
+  },
+  {
+    path:"/leveltwo",
+    element:<Leveltwo />,
+  }
 ]);
 
 // 2. Tell React to use the router

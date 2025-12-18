@@ -74,10 +74,10 @@ The application should now be running on `http://localhost:5173` (or the port sp
 
 This project was made possible by the generous artists and creators who share their work with the community. A huge thank you to them!
 
-*   **Knight Character Spritesheet:** [Link to the asset's webpage] by [Artist's Name]
-*   **Villain (Demon) Spritesheet:** [Link to the asset's webpage] by [Artist's Name]
-*   **Ghost GIFs:** [Link to the asset's webpage] by [Artist's Name]
-*   **Background Ambiance Audio:** [Link to the asset's webpage] by [Creator's Name]
+*   **Knight Character Spritesheet:** from itch.io
+*   **Villain (Demon) Spritesheet:** from itch.io
+*   **Ghost GIFs:** by Muinashraf
+*   **Background Ambiance Audio:** from Unknown publisher
 
 ---
 

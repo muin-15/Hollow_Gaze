@@ -1,0 +1,32 @@
+/* --- LAYER 1: Background --- */
+.Leveltwo{
+  position: relative; 
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  background-color: #0c0d11; 
+}
+.blurry-background {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  filter: blur(8px);
+  z-index: 1; /* At the very back */
+}
+.upper-bg {
+  background-color: rgb(226, 54, 54, 0.65);
+  height: 55%;
+}
+.lower-bg {
+  background-color: rgba(184, 25, 25, 0.627);
+  height: 45%;
+}
+.lower-front-bg {
+  position: absolute;
+  width: 100%;
+  height: 15%;
+  background-color: black;
+  bottom: 0; /* Changed from 'top' for better positioning */
+  z-index: 3; /* Above other foreground elements, below characters */
+}

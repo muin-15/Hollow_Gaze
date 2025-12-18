@@ -1,0 +1,11 @@
+.Videostory{
+    width: 100vw;
+    height: 100vh;
+    background-color: #1f1e1efb;
+    display: flex;
+}
+.myvideo{
+    width: 100vw;
+    height: 100vh;
+    align-self: center;
+}

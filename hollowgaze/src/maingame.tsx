@@ -3,10 +3,14 @@
 import  { useState, useEffect, useRef } from 'react';
 import Knight from './player';
 import './maingame.css';
+import { useNavigate } from 'react-router-dom';
 
+
+ 
 // --- Game Constants ---
 const KNIGHT_WALK_SPEED = 4;
 const GHOST_DISAPPEAR_TRIGGER_X = 600; // <<< --- NEW: The X-coordinate that triggers the ghosts to disappear
+
 
 function MGame() {
   // --- Game State ---
@@ -14,7 +18,7 @@ function MGame() {
   const [knightState, setKnightState] = useState<'idle' | 'walking' | 'attacking'>('idle');
   const [areGhostsVisible, setAreGhostsVisible] = useState(true); // <<< --- NEW: State to control ghost visibility
   const requestRef = useRef<number>(0);
-
+const navigate=useNavigate();
   // --- Keyboard Input Logic (No changes needed here) ---
 // --- NEW KEYBOARD INPUT LOGIC ---
 
@@ -75,6 +79,10 @@ useEffect(() => {
       // Handle knight movement
       if (knightState === 'walking') {
         setKnightX(prevX => prevX + KNIGHT_WALK_SPEED);
+      }
+
+      if (knightX > 1000) {
+        navigate('/videointro');
       }
       requestRef.current = requestAnimationFrame(gameLoop);
     };
